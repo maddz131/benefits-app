@@ -1,0 +1,6 @@
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Release\BenefitsAppDB.dacpac
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Release\BenefitsAppDB.dll
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Release\BenefitsAppDB.pdb
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Release\BenefitsAppDB.sqlproj.AssemblyReference.cache
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Release\BenefitsAppDB.dll
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Release\BenefitsAppDB.pdb
