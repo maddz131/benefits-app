@@ -1,0 +1,12 @@
+C:\Users\gotta\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Debug\BenefitsAppDB.dacpac
+C:\Users\gotta\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Debug\BenefitsAppDB.dll
+C:\Users\gotta\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Debug\BenefitsAppDB.pdb
+C:\Users\gotta\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Debug\BenefitsAppDB.sqlproj.AssemblyReference.cache
+C:\Users\gotta\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Debug\BenefitsAppDB.dll
+C:\Users\gotta\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Debug\BenefitsAppDB.pdb
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Debug\BenefitsAppDB.dacpac
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Debug\BenefitsAppDB.dll
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\bin\Debug\BenefitsAppDB.pdb
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Debug\BenefitsAppDB.sqlproj.AssemblyReference.cache
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Debug\BenefitsAppDB.dll
+E:\Maddie\paylocity-challenge\BenefitsApi\BenefitsAppDB\obj\Debug\BenefitsAppDB.pdb
