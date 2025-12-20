@@ -79,7 +79,7 @@ export const Employees = ({
             <AddDependentModal
                 open={showAddDependentModal}
                 onClose={handleCloseAddDependentModal}
-                employeeId={selectedEmployeeId}
+                employeeId={selectedEmployeeId !== null ? Number(selectedEmployeeId) : null}
                 onSuccess={loadEmployees}
             />
 
@@ -87,7 +87,7 @@ export const Employees = ({
                 open={showViewDependentsModal}
                 onClose={handleCloseViewDependentsModal}
                 dependents={dependents}
-                employeeId={selectedEmployeeId}
+                employeeId={selectedEmployeeId !== null ? Number(selectedEmployeeId) : null}
                 loading={dependentsLoading}
                 onDelete={() => {
                     loadEmployees();

@@ -1,17 +1,27 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useMemo } from 'react';
+import { Employee } from '../types';
+
+/**
+ * Return type for useEmployeeSearch hook
+ */
+export interface UseEmployeeSearchReturn {
+    searchTerm: string;
+    setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+    filteredEmployees: Employee[];
+}
 
 /**
  * Custom hook for employee search functionality
- * @param {Array} employees - Array of employees to search through
- * @returns {Object} Search state and filtered employees
+ * @param employees - Array of employees to search through
+ * @returns Search state and filtered employees
  */
-export const useEmployeeSearch = (employees = []) => {
-    const [searchTerm, setSearchTerm] = useState('');
+export const useEmployeeSearch = (employees: Employee[] = []): UseEmployeeSearchReturn => {
+    const [searchTerm, setSearchTerm] = useState<string>('');
 
     /**
      * Filter employees based on search term (real-time filtering)
      */
-    const filteredEmployees = useMemo(() => {
+    const filteredEmployees = useMemo<Employee[]>(() => {
         if (!searchTerm) return employees;
 
         const searchLower = searchTerm.toLowerCase();

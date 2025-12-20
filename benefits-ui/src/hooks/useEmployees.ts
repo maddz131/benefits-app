@@ -1,20 +1,33 @@
 import { useState, useCallback, useEffect } from 'react';
 import { fetchEmployees, deleteEmployee } from '../services/employeeService';
+import { Employee } from '../types';
+
+/**
+ * Return type for useEmployees hook
+ */
+export interface UseEmployeesReturn {
+    employees: Employee[];
+    setEmployees: React.Dispatch<React.SetStateAction<Employee[]>>;
+    loading: boolean;
+    error: string | null;
+    loadEmployees: () => Promise<void>;
+    handleDeleteEmployee: (id: number | string) => Promise<void>;
+}
 
 /**
  * Custom hook for managing employees
- * @param {Array} initialEmployees - Initial employees array
- * @returns {Object} Employees state and handlers
+ * @param initialEmployees - Initial employees array
+ * @returns Employees state and handlers
  */
-export const useEmployees = (initialEmployees = []) => {
-    const [employees, setEmployees] = useState(initialEmployees);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+export const useEmployees = (initialEmployees: Employee[] = []): UseEmployeesReturn => {
+    const [employees, setEmployees] = useState<Employee[]>(initialEmployees);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
 
     /**
      * Load employees from API
      */
-    const loadEmployees = useCallback(async () => {
+    const loadEmployees = useCallback(async (): Promise<void> => {
         setLoading(true);
         setError(null);
         try {
@@ -31,7 +44,7 @@ export const useEmployees = (initialEmployees = []) => {
     /**
      * Handle employee deletion
      */
-    const handleDeleteEmployee = useCallback(async (id) => {
+    const handleDeleteEmployee = useCallback(async (id: number | string): Promise<void> => {
         const confirmed = window.confirm(
             'Are you sure you want to delete this employee and their dependents? ' +
             'This action cannot be undone.'

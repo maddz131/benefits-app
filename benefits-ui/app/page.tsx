@@ -84,6 +84,13 @@ export default function Home() {
                                 aria-label="open drawer"
                                 onClick={handleDrawerToggle}
                                 className="hamburger-menu"
+                                sx={{
+                                    position: 'absolute',
+                                    top: '10px',
+                                    right: '10px',
+                                    left: 'auto',
+                                    margin: 0
+                                }}
                             >
                                 <FiMenu size={24} />
                             </IconButton>
@@ -92,7 +99,7 @@ export default function Home() {
                         {/* Title and subtitle - Top center/left */}
                         <div className="title-container">
                             <h1 className="header-title">
-                                Paylocity Benefits
+                                Employee Benefits
                             </h1>
                             <p className="header-subtitle">
                                 Employee Benefits Management System
@@ -119,6 +126,7 @@ export default function Home() {
                     </header>
 
                     <Drawer
+                        anchor="right"
                         variant="temporary"
                         open={mobileOpen}
                         onClose={handleDrawerToggle}
