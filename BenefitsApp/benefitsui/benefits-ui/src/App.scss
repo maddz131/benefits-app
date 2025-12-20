@@ -1,0 +1,372 @@
+.App {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.header {
+    background: linear-gradient(135deg, #0048ff 0%, #389cff 100%);
+    padding: 30px 20px 60px 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    color: white;
+    min-height: 180px;
+    position: relative;
+    
+    @media (max-width: 960px) {
+        padding: 50px 15px 20px 15px;
+        min-height: auto;
+    }
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+.header-container {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+}
+
+.header-subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    z-index: 1;
+}
+
+.title-container {
+    text-align: center;
+    
+    @media (max-width: 960px) {
+        margin-bottom: 20px;
+    }
+}
+
+.tabs-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+    gap: 4px;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 400;
+    font-size: 0.95rem;
+    min-width: 120px;
+    box-shadow: none;
+    transform: translateY(0);
+    border-top: 2px solid transparent;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    &.active {
+        background: rgba(255, 255, 255, 0.25);
+        font-weight: 600;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+        border-top: 2px solid rgba(255, 255, 255, 0.8);
+    }
+}
+
+.content-container {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.drawer-content {
+    text-align: center;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// ============================================================================
+// Employees Component Styles
+// ============================================================================
+
+.employees-container {
+    width: 100%;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.employees-header {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.search-bar-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    
+    &:focus {
+        outline: none;
+        border-color: #0048ff;
+        box-shadow: 0 0 0 3px rgba(0, 72, 255, 0.1);
+    }
+    
+    &::placeholder {
+        color: #adb5bd;
+    }
+}
+
+.search-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #0048ff 0%, #389cff 100%);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 72, 255, 0.3);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.error-message {
+    color: #dc3545;
+    padding: 12px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.employee-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 1000px; // Ensure minimum width for all columns
+    
+    thead {
+        background: linear-gradient(135deg, #0048ff 0%, #389cff 100%);
+        color: white;
+        
+        th {
+            padding: 16px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            
+            &:first-child {
+                border-top-left-radius: 8px;
+                padding-left: 20px;
+            }
+            
+            &:last-child {
+                border-top-right-radius: 8px;
+                padding-right: 20px;
+            }
+        }
+    }
+    
+    tbody {
+        tr {
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.2s ease;
+            
+            &:hover {
+                background-color: #f8f9fa;
+            }
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        td {
+            padding: 16px 12px;
+            font-size: 0.95rem;
+            color: #333;
+            vertical-align: middle;
+            
+            &:first-child {
+                padding-left: 20px;
+                font-weight: 600;
+                color: #0048ff;
+            }
+            
+            &:last-child {
+                padding-right: 20px;
+            }
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6c757d;
+            font-style: italic;
+        }
+    }
+    
+    // Action icon cells
+    tbody td:nth-last-child(-n+3) {
+        text-align: center;
+        padding: 12px;
+        
+        svg {
+            font-size: 1.2rem;
+            transition: transform 0.2s ease, color 0.2s ease;
+            
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+    
+    // Style for action icons with different colors
+    tbody td:nth-last-child(3) svg {
+        color: #28a745;
+        
+        &:hover {
+            color: #218838;
+        }
+    }
+    
+    tbody td:nth-last-child(2) svg {
+        color: #007bff;
+        
+        &:hover {
+            color: #0056b3;
+        }
+    }
+    
+    tbody td:nth-last-child(1) svg {
+        color: #dc3545;
+        
+        &:hover {
+            color: #c82333;
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+    .employee-table {
+        font-size: 0.9rem;
+        
+        thead th,
+        tbody td {
+            padding: 12px 8px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .employees-container {
+        padding: 12px;
+    }
+    
+    .employee-table-container {
+        border-radius: 4px;
+    }
+    
+    .employee-table {
+        font-size: 0.85rem;
+        
+        thead th,
+        tbody td {
+            padding: 10px 6px;
+        }
+        
+        thead th:first-child,
+        tbody td:first-child {
+            padding-left: 12px;
+        }
+        
+        thead th:last-child,
+        tbody td:last-child {
+            padding-right: 12px;
+        }
+    }
+}
